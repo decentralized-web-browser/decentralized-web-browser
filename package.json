@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/iExecBlockchainComputing/iexec-dapp-samples#readme",
   "dependencies": {
+    "commander": "2.13.0",
     "iexec-oracle-contract": "1.1.3",
     "request": "2.83.0",
     "request-promise": "4.2.2"
