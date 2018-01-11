@@ -21,8 +21,27 @@ Start a [Pull Request](https://github.com/iExecBlockchainComputing/iexec-dapp-sa
 ---
 # My Dapp name
 ## Description
-My Dapp description here...
+A dapp to download websites offline like a decentralized web browser. Simple pass the url that you want to get and it will download the html page.
 ## Dapp params
-An example of a iexec.js conf
+To execute it, do the following:
+1. Deploy the app with: `iexec deploy`
+2. Submit the work with: `iexec submit '{"cmdline": "https://<your-website>.com"}'``
+3. Check the status of the result with: `iexec result <tx-hash>``
+4. Once the job has been processed, get the file with: `iexec result <tx-hash> --save`
+5. Convert the file to html by changing it's name to: `page.html` or similar
+6. Open the file and check the offline website that you just downloaded
 ## [Examples](./examples)
-A link to all iexec.js conf examples for the dapp.
+If you want, you can set the url in the `iexec.js` file instead of passing it as a parameter. Modify the file like this:
+```
+module.exports = {
+  name: 'WebBrowser',
+  data: {
+    type: 'BINARY',
+    cpu: 'AMD64',
+    os: 'LINUX',
+  },
+  work: {
+		cmdline:'https://<YOUR-URL-HERE>.com',
+  }
+};
+```
