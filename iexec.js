@@ -4,8 +4,7 @@ module.exports = {
     type: 'BINARY',
     cpu: 'AMD64',
     os: 'LINUX',
-  },
-  work: {
-		cmdline: '--url https://google.com',
-  }
+  }, work: {
+		cmdline: '-h'
+	}
 };
